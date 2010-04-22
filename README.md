@@ -15,4 +15,4 @@ of impressing your friends.
 
 LICENSE
 =======
-new bsd for this one, guys.
+new bsd or GPLv3 for this one, guys.
