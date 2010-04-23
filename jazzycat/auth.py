@@ -42,7 +42,7 @@ class DjangoAuth(AuthBackend):
     def add_key_to_user(self, user, key):
         try:
             self.SSHPublicKey.objects.create(
-                user=self.User.objects.get(username=user)
+                user=self.User.objects.get(username=user),
                 key=key
             )
         except self.User.DoesNotExist:

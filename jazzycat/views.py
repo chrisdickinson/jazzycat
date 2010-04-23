@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.contrib.models import User
+from django.contrib.auth.models import User
 from django.http import HttpResponse, Http404
 from django.utils import simplejson
 from jazzycat.auth import PERMISSION_GLUE
@@ -58,5 +58,5 @@ def register(request, django_settings=settings):
     return HttpResponse(simplejson.dumps({
         'success':"You successfully registered the username '%s'"%username,
         'results':results,
-    }, status=200, mimetype="text/json")
+    }), status=200, mimetype="text/json")
 
