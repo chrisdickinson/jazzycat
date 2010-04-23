@@ -52,7 +52,7 @@ def register(request, django_settings=settings):
     results = stderr.read()
 
     for permission in django_settings.JAZZYCAT_AUTO_PERMISSIONS:
-        stdin, stdout, stderr = client.exec_command("add-permission %s '%s'" % (username, PERMISSION_GLUE.join(permission))
+        stdin, stdout, stderr = client.exec_command("add-permission %s '%s'" % (username, PERMISSION_GLUE.join(permission)))
         stdin.close(); stdout.close(); stderr.close()
 
     return HttpResponse(simplejson.dumps({
